@@ -13,14 +13,14 @@ const Navbar = () => {
         })
     }, []);
 
-    const [mobileMenu, setMobileMennu] = useState(false);
+    const [mobileMenu, setMobileMenu] = useState(false);
     const toggleMenu = () => {
-        mobileMenu? setMobileMennu(false) : setMobileMennu(true)
+        mobileMenu? setMobileMenu(false) : setMobileMenu(true)
     }
 
     return (
         <nav className={`container ${sticky? 'dark-nav' : ''}`}>
-            <img src={logo} alt="" className="logo"/>
+            <img src={logo} alt="Логотип Logic"/>
             <ul className={mobileMenu? '' : 'hide-mobile-menu'}>
                 <li><Link to="hero" smooth={true} offset={0} duration={500}>Главная</Link></li>
                 <li><Link to="program" smooth={true} offset={-260} duration={500}>Программы</Link></li>
@@ -29,7 +29,7 @@ const Navbar = () => {
                 <li><Link to="testimonials" smooth={true} offset={-260} duration={500}>Отзывы</Link></li>
                 <li><Link to="contact" smooth={true} offset={-260} duration={500} className="btn">Обратная связь</Link></li>
             </ul>
-            <img src={menu_icon} alt="" className="menu-icon" onClick={toggleMenu }/>
+            <img src={menu_icon} alt="Меню" className="menu-icon" onClick={toggleMenu }/>
         </nav>
     )
 }

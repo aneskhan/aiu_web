@@ -10,20 +10,30 @@ import user_4 from "../../assets/user-4.png"
 const Testimonials = () => {
 
     const slider = useRef();
-    let tx = 0
+    const [tx, setTx] = React.useState(0);
 
     const slideForward = () => {
-        if (tx > -50) {
-            tx -= 25;
+        if (tx > -75) {
+            setTx(prevTx => {
+                const newTx = prevTx - 25;
+                slider.current.style.transform = `translateX(${newTx}%)`;
+                return newTx;
+            });
+        } else {
+            slider.current.style.transform = `translateX(${tx}%)`;
         }
-        slider.current.style.transform = `translateX(${tx}%)`
     }
 
     const slideBackward = () => {
         if (tx < 0) {
-            tx += 25;
+            setTx(prevTx => {
+                const newTx = prevTx + 25;
+                slider.current.style.transform = `translateX(${newTx}%)`;
+                return newTx;
+            });
+        } else {
+            slider.current.style.transform = `translateX(${tx}%)`;
         }
-        slider.current.style.transform = `translateX(${tx}%)`
     }
 
     return (
@@ -35,7 +45,7 @@ const Testimonials = () => {
                     <li>
                         <div className="slide">
                             <div className="user-info">
-                                <img src={user_1} alt=""/>
+                                <img src={user_1} alt="Аружан"/>
                                 <div>
                                     <h3>Аружан</h3>
                                     <span>Астана, Казахстан</span>
@@ -49,7 +59,7 @@ const Testimonials = () => {
                     <li>
                         <div className="slide">
                             <div className="user-info">
-                                <img src={user_2} alt=""/>
+                                <img src={user_2} alt="Арман"/>
                                 <div>
                                     <h3>Арман</h3>
                                     <span>Астана, Казахстан</span>
@@ -63,7 +73,7 @@ const Testimonials = () => {
                     <li>
                         <div className="slide">
                             <div className="user-info">
-                                <img src={user_3} alt=""/>
+                                <img src={user_3} alt="Малика"/>
                                 <div>
                                     <h3>Малика</h3>
                                     <span>Семей, Казахстан</span>
@@ -77,7 +87,7 @@ const Testimonials = () => {
                     <li>
                         <div className="slide">
                             <div className="user-info">
-                                <img src={user_4} alt=""/>
+                                <img src={user_4} alt="Даулет"/>
                                 <div>
                                     <h3>Даулет</h3>
                                     <span>Павлодар, Казахстан</span>
