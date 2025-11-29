@@ -50,7 +50,7 @@ const Contact = () => {
                     <label>Имя</label>
                     <input type="text" name="name" placeholder="Введи свое Имя" required/>
                     <label>Номер телефона</label>
-                    <input type="telephone" name="phone" placeholder="Введи номер телефона" required/>
+                    <input type="tel" name="phone" placeholder="Введи номер телефона" required/>
                     <label>Твое сообщение</label>
                     <textarea name="message" rows="6" placeholder="Введи сообщение" required></textarea>
                     <button type="submit" className="btn dark-btn">Отправить <img src={white_arrow} alt=""/></button>

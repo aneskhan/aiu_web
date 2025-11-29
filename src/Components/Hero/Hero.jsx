@@ -1,22 +1,17 @@
-import React, {useState} from 'react'
+import React from 'react'
 import "./Hero.css"
 import dark_arrow from "../../assets/dark-arrow.png"
-import {Navigate} from 'react-router-dom'
+import {Link} from 'react-scroll'
 
 const Hero = () => {
-    const [goToContact, setGoToContact] = useState(false);
-    if (goToContact) {
-        return <Navigate to="/Explore" />
-    }
-
     return (
-        <div className="hero container">
+        <div id="hero" className="hero container">
             <div className="hero-text">
                 <h1>Astana International University</h1>
                 <p>Международный университет Астаны – современный глобальный университет, генерирующий и
-                    распространяющий знания, исследования и инновации для Евразийского пространства, входящий в топ 20
+                    распространяющие знания, исследования и инновации для Евразийского пространства, входящий в топ 20
                     университетов Евразии</p>
-                {/*<button className="btn" onClick={() => {setGoToContact(true)}}>Узнать больше <img src={dark_arrow}/></button>*/}
+                <Link to="contact" smooth={true} offset={-260} duration={500} className="btn">Узнать больше <img src={dark_arrow}/></Link>
             </div>
         </div>
     )
