@@ -4,11 +4,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Outfit", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 body {
-    background: #f5f5f5;
+    background: #F9F9F9;
 }
 
 a {
@@ -25,7 +25,7 @@ a {
 
 .btn {
     background: #FFF;
-    color: #212121;
+    color: #333;
     padding: 14px 25px;
     font-size: 16px;
     border-radius: 30px;
@@ -35,6 +35,12 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .btn img{
@@ -43,7 +49,7 @@ a {
 }
 
 .btn.dark-btn {
-    background: #212EA0;
+    background: #2E86AB;
     color: #fff;
 }
 

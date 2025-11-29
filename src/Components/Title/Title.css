@@ -1,15 +1,17 @@
 .title {
     text-align: center;
-    color: #212EA0;
+    color: #2E86AB;
     font-size: 15px;
     font-weight: 600;
     text-transform: uppercase;
     margin: 70px 0 30px;
+    font-family: "Outfit", sans-serif;
 }
 
 .title h2 {
     font-size: 32px;
-    color: #000F38;
+    color: #333;
     margin-top: 5px;
     text-transform: none;
+    font-family: "Outfit", sans-serif;
 }

@@ -1,7 +1,7 @@
 .hero {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)), url("../../assets/hero.png");
+    background: linear-gradient(rgba(46, 134, 171, 0.8), rgba(46, 134, 171, 0.8)), url("../../assets/hero.png");
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -18,12 +18,14 @@
 .hero-text h1 {
     font-size: 60px;
     font-weight: 600;
+    font-family: "Outfit", sans-serif;
 }
 
 .hero-text p {
     max-width: 700px;
     margin: 10px auto 20px;
     line-height: 1.4;
+    font-size: 18px;
 }
 
 @media (max-width: 850px) {
@@ -40,7 +42,7 @@
     }
 
     .hero-text p {
-        font-size: 14px;
+        font-size: 16px;
         margin: 15px auto 30px;
     }
 }
