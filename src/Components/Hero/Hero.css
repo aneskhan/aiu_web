@@ -1,10 +1,10 @@
 .hero {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(rgba(46, 134, 171, 0.8), rgba(46, 134, 171, 0.8)), url("../../assets/hero.png");
+    background: linear-gradient(rgba(9, 9, 11, 0.72), rgba(9, 9, 11, 0.72)), url("../../assets/hero.png");
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: #fafafa;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,16 +16,18 @@
 }
 
 .hero-text h1 {
-    font-size: 60px;
-    font-weight: 600;
-    font-family: "Outfit", sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
 }
 
 .hero-text p {
     max-width: 700px;
-    margin: 10px auto 20px;
-    line-height: 1.4;
-    font-size: 18px;
+    margin: 20px auto 28px;
+    line-height: 1.6;
+    font-size: 17px;
+    color: #d4d4d8;
 }
 
 @media (max-width: 850px) {
@@ -42,7 +44,7 @@
     }
 
     .hero-text p {
-        font-size: 16px;
+        font-size: 15px;
         margin: 15px auto 30px;
     }
 }

@@ -1,14 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --background: #ffffff;
+    --foreground: #09090b;
+    --card: #ffffff;
+    --card-foreground: #09090b;
+    --primary: #18181b;
+    --primary-foreground: #fafafa;
+    --secondary: #f4f4f5;
+    --secondary-foreground: #18181b;
+    --muted: #f4f4f5;
+    --muted-foreground: #71717a;
+    --border: #e4e4e7;
+    --input: #e4e4e7;
+    --ring: #18181b;
+    --radius: 0.5rem;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
 }
 
 body {
-    background: #F9F9F9;
+    background: var(--background);
+    color: var(--foreground);
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -24,41 +43,49 @@ a {
 }
 
 .btn {
-    background: #FFF;
-    color: #333;
-    padding: 14px 25px;
-    font-size: 16px;
-    border-radius: 30px;
+    background: var(--background);
+    color: var(--foreground);
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    border-radius: var(--radius);
     cursor: pointer;
-    border: 0;
+    border: 1px solid var(--border);
     outline: 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
 .btn:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background: var(--secondary);
 }
 
-.btn img{
-    width: 20px;
-    margin-left: 10px;
+.btn:focus-visible {
+    box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--ring);
+}
+
+.btn img {
+    width: 16px;
+    margin-left: 8px;
 }
 
 .btn.dark-btn {
-    background: #2E86AB;
-    color: #fff;
+    background: var(--primary);
+    color: var(--primary-foreground);
+    border-color: var(--primary);
+}
+
+.btn.dark-btn:hover {
+    background: #27272a;
 }
 
 @media (max-width: 1200px) {
     .container {
         padding-left: 5%;
         padding-right: 5%;
-    }
-    .btn {
-        padding: 14px 22px;
     }
 }

@@ -9,18 +9,19 @@
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    padding: 15px;
-    width: 50px;
+    padding: 14px;
+    width: 46px;
     border-radius: 50%;
     cursor: pointer;
-    background: #2E86AB;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease, box-shadow 0.3s ease;
+    background: var(--primary);
+    border: 1px solid var(--primary);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: background 0.15s ease, box-shadow 0.15s ease;
 }
 
 .next-btn:hover, .back-btn:hover {
-    background: #A23B72;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background: #27272a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .back-btn {
@@ -36,7 +37,7 @@
     display: flex;
     width: 200%;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: transform 0.5s ease;
 }
 
 .slider ul li {
@@ -46,36 +47,45 @@
 }
 
 .slide {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    border-radius: 10px;
-    color: #676767;
-    line-height: 1.6;
-    background: #fff;
-    transition: transform 0.3s ease;
+    background: var(--card);
+    border: 1px solid var(--border);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    padding: 32px;
+    border-radius: var(--radius);
+    color: var(--muted-foreground);
+    line-height: 1.65;
+    font-size: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .slide:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .slide img {
-    width: 65px;
+    width: 56px;
     border-radius: 50%;
-    margin-right: 10px;
-    border: 4px solid #2E86AB;
+    margin-right: 12px;
+    border: 1px solid var(--border);
 }
 
 .user-info {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    font-size: 15px;
+    margin-bottom: 18px;
+    font-size: 14px;
 }
 
 .user-info h3 {
-    color: #2E86AB;
-    font-family: "Outfit", sans-serif;
+    color: var(--foreground);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.user-info span {
+    color: var(--muted-foreground);
+    font-size: 13px;
 }
 
 @media (max-width: 800px) {
@@ -90,11 +100,10 @@
         padding: 10px;
     }
     .slide {
-        padding: 10px;
+        padding: 16px;
     }
     .slide img {
-        width: 50px;
-        border: 3px solid #2E86AB;
+        width: 48px;
     }
 }
 
@@ -105,9 +114,9 @@
         font-size: 12px;
     }
     .user-info h3 {
-        font-size: 16px;
+        font-size: 15px;
     }
     .slider p {
-        font-size: 12px;
+        font-size: 13px;
     }
 }

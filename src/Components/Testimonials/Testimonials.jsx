@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import {useState} from 'react'
 import "./Testimonials.css"
 import next_icon from "../../assets/next-icon.png"
 import back_icon from "../../assets/back-icon.png"
@@ -9,39 +9,17 @@ import user_4 from "../../assets/user-4.png"
 
 const Testimonials = () => {
 
-    const slider = useRef();
-    const [tx, setTx] = React.useState(0);
+    const [tx, setTx] = useState(0);
 
-    const slideForward = () => {
-        if (tx > -75) {
-            setTx(prevTx => {
-                const newTx = prevTx - 25;
-                slider.current.style.transform = `translateX(${newTx}%)`;
-                return newTx;
-            });
-        } else {
-            slider.current.style.transform = `translateX(${tx}%)`;
-        }
-    }
-
-    const slideBackward = () => {
-        if (tx < 0) {
-            setTx(prevTx => {
-                const newTx = prevTx + 25;
-                slider.current.style.transform = `translateX(${newTx}%)`;
-                return newTx;
-            });
-        } else {
-            slider.current.style.transform = `translateX(${tx}%)`;
-        }
-    }
+    const slideForward = () => setTx(prev => (prev > -75 ? prev - 25 : prev));
+    const slideBackward = () => setTx(prev => (prev < 0 ? prev + 25 : prev));
 
     return (
         <div className="testimonials">
-            <img src={next_icon} alt="" className="next-btn" onClick={slideForward}/>
-            <img src={back_icon} alt="" className="back-btn" onClick={slideBackward}/>
+            <img src={next_icon} alt="Следующий отзыв" className="next-btn" onClick={slideForward}/>
+            <img src={back_icon} alt="Предыдущий отзыв" className="back-btn" onClick={slideBackward}/>
             <div className="slider">
-                <ul ref={slider}>
+                <ul style={{transform: `translateX(${tx}%)`}}>
                     <li>
                         <div className="slide">
                             <div className="user-info">
